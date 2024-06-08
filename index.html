@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .task {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task">
+        <h2>Task 1: Capitalize First Letters</h2>
+        <pre id="task1"></pre>
+    </div>
+
+    <div class="task">
+        <h2>Task 2: Reverse String</h2>
+        <pre id="task2"></pre>
+    </div>
+
+    <div class="task">
+        <h2>Task 3: Factorial of 5</h2>
+        <pre id="task3"></pre>
+    </div>
+
+    <div class="task">
+        <h2>Task 4: Write to 5</h2>
+        <pre id="task4"></pre>
+    </div>
+
+    <div class="task">
+        <h2>Task 5: Capitalize and Remove Spaces</h2>
+        <pre id="task5"></pre>
+    </div>
+
+    <div class="task">
+        <h2>Task 6: Odd Numbers from 1 to 20</h2>
+        <pre id="task6"></pre>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Завдання 1
+            let str1 = "I am in the KPI";
+            let words1 = str1.split(" ");
+            for (let i = 0; i < words1.length; i++) {
+                words1[i] = words1[i][0].toUpperCase() + words1[i].slice(1);
+            }
+            let result1 = words1.join(" ");
+            document.getElementById('task1').textContent = result1;
+
+            // Завдання 2
+            let str2 = "tseb eht ma i";
+            let reversedStr = "";
+            for (let i = str2.length - 1; i >= 0; i--) {
+                reversedStr += str2[i];
+            }
+            document.getElementById('task2').textContent = reversedStr;
+
+            // Завдання 3
+            let n = 5;
+            let factorial = 1;
+            for (let i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            document.getElementById('task3').textContent = factorial;
+
+            // Завдання 4
+            let result4 = "Пишемо до 5і: ";
+            for (let i = 1; i <= 5; i++) {
+                result4 += i;
+                if (i < 5) {
+                    result4 += ", ";
+                }
+            }
+            document.getElementById('task4').textContent = result4;
+
+            // Завдання 5
+            let str5 = "JavaScript is a pretty good language";
+            let words5 = str5.split(" ");
+            for (let i = 0; i < words5.length; i++) {
+                words5[i] = words5[i][0].toUpperCase() + words5[i].slice(1);
+            }
+            let result5 = words5.join("");
+            document.getElementById('task5').textContent = result5;
+
+            // Завдання 6
+            let result6 = "";
+            for (let i = 1; i <= 20; i++) {
+                if (i % 2 !== 0) {
+                    result6 += i + " ";
+                }
+            }
+            document.getElementById('task6').textContent = result6.trim();
+        };
+    </script>
+</body>
+</html>
